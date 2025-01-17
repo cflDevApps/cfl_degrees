@@ -120,6 +120,7 @@ def bf_search(initial_state: Node, target):
             return path[1:]
 
         explored.add(current_node)  # Add the mode to the explored set
+
         # Expandind node
         for m_id, p_id in neighbors_for_person(current_node.state):
             if not (any(n.state == p_id for n in explored.frontier)
